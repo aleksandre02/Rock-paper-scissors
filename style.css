@@ -1,0 +1,145 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+h1{
+    font-size: 30px;
+    color: darkslateblue;
+    background-color: black;
+    padding: 1px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.jeirani{
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.jeirani-b{
+    border: 1px solid steelblue;
+    padding: 10px;
+    transition: all 0.2s;
+    cursor:pointer;
+}
+.jeirani-b:hover{
+    background-color: blue;
+    border-radius: 15px;
+   
+}
+.players{
+    padding: 10px 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
+.players .player{
+    color: darkgreen;
+}
+
+.players .computer{
+    color: darkred;
+}
+
+.playerboxes{
+    margin: 10px 20px  50px;
+    display: grid;
+    column-gap: 100px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    
+
+}
+
+.playerboxes .playerbox{
+    border: 3px solid darkviolet;
+    font-size: 70px;    
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerboxes .computerbox{
+    border: 3px solid darkviolet;
+    font-size: 70px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hp{
+
+}
+.playerboxes .player-hp{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.playerboxes .player-hp-active{
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    border: 1.5px solid black;
+}
+.playerboxes .computer-hp{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.computer-hp-active{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    border: 1.5px solid black;
+    margin-left: auto;
+    margin-right: 0;
+}
+.playerboxes .computer-hp .computer-hp-background{
+    background-color: rgba(171, 0, 0, 0.811);
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+}
+.playerboxes .player-hp .player-hp-background{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+.result-match{
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+}
+.result-match .win{
+    color: rgb(52, 174, 0);
+    
+    display: none; 
+ 
+}
+.result-match .lost{
+    color: red;
+    display: none;
+    
+
+}
+.result-match .tie{
+    color: rgb(8, 0, 59);
+    display: none;
+
+}
+.result-match .placeholder{
+    color: white;
+
+}
