@@ -2,17 +2,27 @@ const jeiraniButtons = document.querySelectorAll('.jeirani-b')
 let playerBox=document.getElementById("motamashe")
 let choices=["✂️", "📄", "🪨"]
 let computerBox=document.getElementById("roboti")
-let playerHp=10
-let computerHp=10
+//player stats
+const playerStartingHp=3
+const computerStartingHp=3
+let playerHp=playerStartingHp
+let computerHp=computerStartingHp
+let playercoins=0
+//hp win lose 
 const computerHpBar=document.querySelector(".computer-hp-background")
 const playerHpBar=document.querySelector(".player-hp-background")
 const resultWin=document.querySelector(".win")
 const resultLost=document.querySelector(".lost")
 const resultTie=document.querySelector(".tie")
 const resultPlaceholder=document.querySelector(".placeholder")
+const currencyNumber=document.querySelector(".currency-number")
+
+
 
 
 function restartGame(){
+  playerHp=playerStartingHp
+  computerHp=computerStartingHp
   playerHpBar.style.width="100%"
   computerHpBar.style.width="100%"
   showResult("placeholder")
@@ -57,7 +67,7 @@ jeiraniButtons.forEach(button => {
             (playerChoice==="🪨"&& computerChoice==="✂️")
         ){
           computerHp--
-          computerHpBar.style.width=`${(computerHp / 10) * 100}%`
+          computerHpBar.style.width=`${(computerHp / computerStartingHp) * 100}%`
           showResult("win")
           
         }
@@ -66,17 +76,24 @@ jeiraniButtons.forEach(button => {
                 (computerChoice==="🪨"&& playerChoice==="✂️")
         ){
           playerHp--
-          playerHpBar.style.width=`${(playerHp / 10) * 100}%`
+          playerHpBar.style.width=`${(playerHp / playerStartingHp) * 100}%`
           showResult("lose")
         }
         else{
           showResult("tie")
         }
         console.log("player- ",playerHp ," enemy- ",computerHp)
-        if(playerHp===0 || computerHp===0){
+        if(computerHp===0){
           restartGame()
-
+          playercoins++
+          currencyNumber.innerHTML=playercoins
+          //playerwins here
         }
+        else if(playerHp===0){
+          restartGame()
+         //computer wins here
+        }
+        
 
     })
 })
