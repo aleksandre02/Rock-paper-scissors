@@ -160,9 +160,11 @@ h1{
     
 
 }
-
-
-/* marjvninv wavigo potionebi da yvelas tavisi peris border gavuketo*/
+.item-boxes{
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
 .potion{
     border: 1px solid steelblue; 
     padding: 10px;
@@ -179,18 +181,32 @@ h1{
     cursor:pointer;
    
 }
-/*
-.potion-block:hover{
-    background-color: rgb(39, 0, 64);
+
+#potion-block:hover{
+    background-color: rgb(25, 0, 101);
     border-radius: 15px;
 }
-.potion-heal:hover{
+#potion-heal:hover{
     background-color: rgb(0, 95, 0);
     border-radius: 15px;
 
 }
-.potion-dmg:hover{
+#potion-dmg:hover{
     background-color: rgb(101, 0, 0);
     border-radius: 15px;
 }
-*/
+
+.enemy{
+    width: 100px;
+    transform: translateY(10px);
+}
+.human{
+    width: 100px;
+    transform: translateY(10px);
+}
+.player-icons{
+    justify-content:space-between;
+    align-items: center;
+    display: flex;
+}
+
