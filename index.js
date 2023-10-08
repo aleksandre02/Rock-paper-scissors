@@ -1,4 +1,5 @@
 const jeiraniButtons = document.querySelectorAll('.jeirani-b')
+const potionButtons=document.querySelectorAll(".item-boxes")
 let playerBox=document.getElementById("motamashe")
 let choices=["✂️", "📄", "🪨"]
 let computerBox=document.getElementById("roboti")

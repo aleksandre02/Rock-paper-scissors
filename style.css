@@ -160,3 +160,37 @@ h1{
     
 
 }
+
+
+/* marjvninv wavigo potionebi da yvelas tavisi peris border gavuketo*/
+.potion{
+    border: 1px solid steelblue; 
+    padding: 10px;
+    transition: all 0.2s;   
+    cursor:pointer;
+    border: 2px solid rgb(0, 0, 95);
+    width: 40px;
+    height: 40px;
+
+}
+.potion:hover{
+    background-color: rgb(106, 0, 133);
+    border-radius: 15px;
+    cursor:pointer;
+   
+}
+/*
+.potion-block:hover{
+    background-color: rgb(39, 0, 64);
+    border-radius: 15px;
+}
+.potion-heal:hover{
+    background-color: rgb(0, 95, 0);
+    border-radius: 15px;
+
+}
+.potion-dmg:hover{
+    background-color: rgb(101, 0, 0);
+    border-radius: 15px;
+}
+*/
